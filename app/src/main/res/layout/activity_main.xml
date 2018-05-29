@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Go"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#39bb11"
+        android:text="GO !"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:onClick="onGo"/>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/InfoBox"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TimerBox"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:text="30s"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/QuestionBox"
+            android:text="2 + 5"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/StatusBox"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:text="1/1"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:id="@+id/SelectionBox"
+        android:layout_below="@id/InfoBox"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="2">
+
+        <TextView
+            android:id="@+id/PostionOne"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:onClick="onAnswerSelect"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/PostionTwo"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="onAnswerSelect"
+            android:text="2"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/PostionThree"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:onClick="onAnswerSelect"
+            android:text="3"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/PostionFour"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:onClick="onAnswerSelect"
+            android:text="4"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+    </GridLayout>
+
+    <TextView
+        android:visibility="invisible"
+        android:layout_margin="30dp"
+        android:text="Correct!"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/AnswerResponse"
+        android:layout_below="@+id/SelectionBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:visibility="invisible"
+        android:text="Play Again"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/PLayAgain"
+        android:layout_below="@+id/AnswerResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="playAgain"/>
+
+</RelativeLayout>
